@@ -35,10 +35,10 @@ def gamma():
 
 def main():
     print(welcome)
-    key = input("Press enter to continue or write 'exit' + enter to end program...") 
+    key = input("Press enter to continue or write 'exit' and press enter to end program...") 
     while key != 'exit':
         gamma()
-        key = input("Press enter to continue or write 'exit' + enter to end program...")
+        key = input("Press enter to continue or write 'exit' and press enter to end program...")
 
 if __name__ == "__main__":
     main()
