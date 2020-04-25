@@ -1,4 +1,4 @@
-# lorentz-factor-calculator
+# Lorentz Factor Calculator
 
 If you are a student of Special Relativity facing a problem set, it can be very tedious to
 calculate the lorentz factor for each excersise.
