@@ -1,5 +1,4 @@
-# coding=utf-8
-#caluclar factor gamma para distintas velocidades
+#coding=utf-8
 
 import cmath
 from math import sqrt
