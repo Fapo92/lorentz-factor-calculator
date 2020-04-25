@@ -24,10 +24,10 @@ def gamma():
         v = Decimal(input("Input the relative velocity v: "))
         if  v < 1:
             resultado = 1/(sqrt(1-(v/c)**2))
-            print(resultado)
+            print('y = ' + str(resultado))
         elif v > 1:
             resultado = 1/(cmath.sqrt(1-(v/c)**2))
-            print(resultado)
+            print('y = ' + str(resultado) + ' (Warning: v faster than c. The Lorentz factor becomes an imaginary number.)')
         elif v == 1:
             print("The Lorentz factor goes to infinity when v = c. Try something else.")
     except Exception as e:
