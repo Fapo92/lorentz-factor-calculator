@@ -14,30 +14,31 @@ welcome = """
     *                                            *    
     * Use: input a velocity in c (example: 0.5c) *
     * to obtain its factor. Repeat as many times *
-    * as you need to.                            *
-    *                                            *
-    * To exit just stop the terminal process or  *
-    * write 'exit' + enter.                      *                       
+    * as you need to.                            *                       
     **********************************************
     """
 
 def gamma():
-    v = Decimal(input("Input the relative velocity v: "))
-    if  v < 1:
-        resultado = 1/(sqrt(1-(v/c)**2))
-        print(resultado)
-    elif v > 1:
-        resultado = 1/(cmath.sqrt(1-(v/c)**2))
-        print(resultado)
-    elif v == 1:
-        print("The Lorentz factor goes to infinity when v = c. Try something else.")
+    try:
+
+        v = Decimal(input("Input the relative velocity v: "))
+        if  v < 1:
+            resultado = 1/(sqrt(1-(v/c)**2))
+            print(resultado)
+        elif v > 1:
+            resultado = 1/(cmath.sqrt(1-(v/c)**2))
+            print(resultado)
+        elif v == 1:
+            print("The Lorentz factor goes to infinity when v = c. Try something else.")
+    except Exception as e:
+        print('Please input a valid velocity') 
 
 def main():
     print(welcome)
-    key = input("Press enter to continue...") 
+    key = input("Press enter to continue or write 'exit' + enter to end program...") 
     while key != 'exit':
         gamma()
-        key = input("Press enter to continue...")
+        key = input("Press enter to continue or write 'exit' + enter to end program...")
 
 if __name__ == "__main__":
     main()
